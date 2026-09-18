@@ -36,7 +36,7 @@ export default function Footer() {
             </div>
 
             <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
-              Serving the residents of Village Jaleelpur Mungra, Mandi Dhanaura, and District Amroha with fast, reliable, and transparent digital government services and online applications.
+              Serving the residents of Village Jaleelpur Mungra (Jalilpur), Mandi Dhanaura, and District Amroha with fast, reliable, and transparent CSC digital government services and online applications.
             </p>
 
             <div className="pt-1 text-xs text-slate-300 space-y-2">
