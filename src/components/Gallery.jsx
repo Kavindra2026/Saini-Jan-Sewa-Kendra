@@ -43,7 +43,7 @@ export default function Gallery({ onOpenLightbox }) {
               <div className="relative h-36 sm:h-64 bg-slate-950 overflow-hidden">
                 <img
                   src={photo.src}
-                  alt={photo.title}
+                  alt={photo.alt || photo.title}
                   className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500"
                   loading="lazy"
                 />

@@ -51,7 +51,7 @@ export default function Hero({ onOpenLightbox }) {
                   >
                     <img
                       src="/images/saini-jan-seva-kendra-shop.jpg"
-                      alt="Saini Jan Seva Kendra - Storefront & Counter"
+                      alt="सैनी जन सेवा केंद्र जलीलपुर मुंगरा – दुकान का अगला दृश्य"
                       className="w-full h-auto max-h-[440px] object-contain rounded-lg"
                       loading="eager"
                     />
@@ -166,7 +166,7 @@ export default function Hero({ onOpenLightbox }) {
                 >
                   <img
                     src="/images/saini-jan-seva-kendra-shop.jpg"
-                    alt="Saini Jan Seva Kendra - Storefront & Counter"
+                    alt="सैनी जन सेवा केंद्र जलीलपुर मुंगरा – दुकान का अगला दृश्य"
                     className="w-full h-auto max-h-[480px] object-cover object-top transition-transform duration-500 group-hover:scale-105"
                     loading="eager"
                   />

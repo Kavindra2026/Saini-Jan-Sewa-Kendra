@@ -50,7 +50,7 @@ export default function About({ onOpenLightbox }) {
             >
               <img
                 src="/images/shop-board.jpg"
-                alt="Saini Jan Seva Kendra Services Signboard"
+                alt="सैनी जन सेवा केंद्र का सेवा बोर्ड – हितेश कुमार, जलीलपुर मुंगरा"
                 className="w-full h-52 sm:h-64 object-cover object-center group-hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent pointer-events-none" />
