@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import TrustStats from './components/TrustStats';
 import About from './components/About';
 import Services from './components/Services';
 import WhyChooseUs from './components/WhyChooseUs';
@@ -34,7 +33,6 @@ export default function App() {
       {/* Main Content Sections */}
       <main className="flex-grow">
         <Hero onOpenLightbox={handleOpenLightbox} />
-        <TrustStats />
         <About onOpenLightbox={handleOpenLightbox} />
         <Services />
         <WhyChooseUs />

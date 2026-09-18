@@ -41,38 +41,66 @@ export default function Hero({ onOpenLightbox }) {
               </p>
             </div>
 
-            {/* Shop Photo on Mobile (Full photo showing board, counter & storefront) */}
-            <div className="sm:hidden pt-2 pb-1">
-              <div className="relative mx-auto max-w-xs">
-                <div className="p-1.5 rounded-2xl bg-gradient-to-tr from-blue-500 via-indigo-500 to-emerald-400 shadow-xl shadow-blue-500/20">
+            {/* Shop Photo on Phone & Tablet Layout (Directly below Title & Subtitles as requested) */}
+            <div className="lg:hidden pt-4 pb-6 px-2">
+              <div className="relative mx-auto max-w-xs sm:max-w-sm">
+                
+                {/* Neon Glow Frame */}
+                <div className="p-1.5 rounded-3xl bg-gradient-to-tr from-blue-500 via-indigo-500 to-emerald-400 shadow-2xl shadow-blue-500/25">
                   <div 
                     onClick={() => onOpenLightbox && onOpenLightbox(0)}
-                    className="relative rounded-xl overflow-hidden bg-slate-950 cursor-pointer group"
+                    className="relative rounded-2xl overflow-hidden bg-slate-950 cursor-pointer group"
                   >
                     <img
                       src="/images/saini-jan-seva-kendra-shop.jpg"
                       alt="सैनी जन सेवा केंद्र जलीलपुर मुंगरा – दुकान का अगला दृश्य"
                       width="625"
                       height="1024"
-                      className="w-full h-auto max-h-[440px] object-contain rounded-lg"
+                      className="w-full h-auto max-h-[440px] object-cover object-top rounded-xl transition-transform duration-500 group-hover:scale-105"
                       loading="eager"
                       fetchPriority="high"
                       decoding="sync"
                     />
 
+                    {/* Gradient Overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/25 to-transparent pointer-events-none" />
+
                     {/* Real Photo Tag */}
-                    <div className="absolute top-2.5 left-2.5 bg-slate-950/85 backdrop-blur-md text-white text-[10px] font-bold px-2 py-0.5 rounded-lg flex items-center gap-1 border border-white/20 shadow-md">
+                    <div className="absolute top-3 left-3 bg-slate-950/85 backdrop-blur-md text-white text-[10px] sm:text-xs font-bold px-2.5 py-1 rounded-xl flex items-center gap-1.5 border border-white/20 shadow-lg">
                       <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
                       <span>Real Shop Photo</span>
                     </div>
 
-                    {/* Live Status Pill */}
-                    <div className="absolute top-2.5 right-2.5 bg-slate-900/90 backdrop-blur-md py-0.5 px-2 rounded-full shadow-md border border-emerald-500/40 flex items-center gap-1 text-[10px] font-bold text-emerald-400">
-                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping" />
-                      <span>Open 7am - 9pm</span>
+                    {/* Bottom Image Caption */}
+                    <div className="absolute bottom-3.5 left-3.5 right-3.5 text-white text-left">
+                      <p className="font-extrabold text-sm sm:text-base leading-tight text-white drop-shadow">
+                        Saini Jan Seva Kendra
+                      </p>
+                      <div className="text-[11px] sm:text-xs text-slate-300 mt-1 flex items-center justify-between">
+                        <span className="font-semibold text-amber-400">Hitesh Kumar</span>
+                        <span className="text-white font-bold bg-blue-600/90 px-2 py-0.5 rounded-lg border border-white/20 text-[10px]">📞 8449544040</span>
+                      </div>
                     </div>
                   </div>
                 </div>
+
+                {/* Floating Trust Card */}
+                <div className="absolute -bottom-4 -left-2 bg-slate-900/95 backdrop-blur-md px-3 py-2 rounded-xl shadow-xl border border-slate-700/80 flex items-center gap-2.5 text-left">
+                  <div className="w-7 h-7 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center flex-shrink-0 font-extrabold text-xs border border-emerald-500/30">
+                    ✓
+                  </div>
+                  <div>
+                    <p className="text-[11px] font-extrabold text-white leading-tight">Verified Citizen Center</p>
+                    <p className="text-[9px] text-slate-400 font-medium">Trusted by hundreds of local families</p>
+                  </div>
+                </div>
+
+                {/* Live Status Pill */}
+                <div className="absolute -top-3 -right-2 bg-slate-900/95 backdrop-blur-md py-1 px-3 rounded-full shadow-xl border border-emerald-500/40 flex items-center gap-1.5 text-[11px] font-bold text-white">
+                  <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
+                  <span className="text-emerald-400">Open Right Now</span>
+                </div>
+
               </div>
             </div>
 
@@ -154,8 +182,8 @@ export default function Hero({ onOpenLightbox }) {
 
           </div>
 
-          {/* Right Column: Real Shop Photo (Hidden on mobile phones because it moved above description) */}
-          <div className="hidden sm:block lg:col-span-5">
+          {/* Right Column: Real Shop Photo (Hidden on phone/tablet, visible on desktop) */}
+          <div className="hidden lg:block lg:col-span-5">
             <div className="relative mx-auto max-w-md lg:max-w-none">
               
               {/* Neon Glow Frame */}
