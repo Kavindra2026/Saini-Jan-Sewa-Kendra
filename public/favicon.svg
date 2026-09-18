@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b3c68" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#10b981" />
+    </linearGradient>
+  </defs>
+  <circle cx="50" cy="50" r="46" fill="url(#blueGrad)" stroke="#ffffff" stroke-width="3" />
+  <circle cx="50" cy="50" r="40" fill="none" stroke="#f59e0b" stroke-width="2" stroke-dasharray="3,3" />
+  <!-- Center symbol: stylized building / digital citizen node -->
+  <path d="M50 20 L25 35 L25 40 L75 40 L75 35 Z" fill="#ffffff" />
+  <!-- Pillars -->
+  <rect x="29" y="42" width="6" height="26" rx="2" fill="#ffffff" />
+  <rect x="42" y="42" width="6" height="26" rx="2" fill="#ffffff" />
+  <rect x="53" y="42" width="6" height="26" rx="2" fill="#ffffff" />
+  <rect x="65" y="42" width="6" height="26" rx="2" fill="#ffffff" />
+  <!-- Base -->
+  <rect x="22" y="70" width="56" height="6" rx="2" fill="#10b981" />
+  <rect x="18" y="77" width="64" height="4" rx="1" fill="#ffffff" />
+  <!-- Small Star / Emblem -->
+  <circle cx="50" cy="30" r="3" fill="#f59e0b" />
+</svg>
