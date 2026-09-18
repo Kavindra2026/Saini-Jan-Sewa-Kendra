@@ -55,30 +55,11 @@
   animation: float 4s ease-in-out infinite;
 }
 
-/* Shimmer sweep for gold headings */
-@keyframes shimmer {
-  0% { background-position: -200% center; }
-  100% { background-position: 200% center; }
-}
-.animate-shimmer {
-  background-size: 200% auto;
-  animation: shimmer 4s linear infinite;
-}
-
-/* Slow spin for decorative elements */
-@keyframes spin-slow {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-.animate-spin-slow {
-  animation: spin-slow 12s linear infinite;
-}
-
-/* Glow pulse for amber headings */
-@keyframes glow-pulse {
-  0%, 100% { text-shadow: 0 0 20px rgba(251, 191, 36, 0.0); }
-  50% { text-shadow: 0 0 30px rgba(251, 191, 36, 0.25), 0 0 60px rgba(251, 191, 36, 0.1); }
-}
+/* Gold headings with subtle glow (GPU friendly, zero main-thread work) */
 .heading-glow {
-  animation: glow-pulse 3s ease-in-out infinite;
+  text-shadow: 0 0 20px rgba(251, 191, 36, 0.2);
+}
+
+.animate-shimmer {
+  background-size: 100% auto;
 }
