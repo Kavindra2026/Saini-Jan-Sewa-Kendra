@@ -52,9 +52,9 @@ export default function TrustStats() {
                   <Icon className={`w-6 h-6 ${item.iconColor}`} />
                 </div>
                 <div>
-                  <h3 className="font-extrabold text-white text-sm sm:text-base leading-snug">
+                  <p className="font-extrabold text-white text-sm sm:text-base leading-snug">
                     {item.title}
-                  </h3>
+                  </p>
                   <p className="text-xs text-slate-400 mt-1.5 leading-relaxed font-medium">
                     {item.desc}
                   </p>

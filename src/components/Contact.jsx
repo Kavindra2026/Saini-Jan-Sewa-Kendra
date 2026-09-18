@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { SERVICES_DATA } from '../data/servicesData';
 import { 
   Phone, 
@@ -87,6 +87,30 @@ export default function Contact() {
   
   // Exact coordinates embed URL for Saini Jan Seva Kendra
   const mapsEmbedUrl = "https://maps.google.com/maps?q=29.0099281,78.3018798&hl=en&z=17&output=embed";
+
+  // Lazy-load map on viewport intersection to eliminate TBT and 3rd party cookies on initial load
+  const [mapVisible, setMapVisible] = useState(false);
+  const mapContainerRef = useRef(null);
+
+  useEffect(() => {
+    if (!('IntersectionObserver' in window)) {
+      setMapVisible(true);
+      return;
+    }
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setMapVisible(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: '250px' }
+    );
+    if (mapContainerRef.current) {
+      observer.observe(mapContainerRef.current);
+    }
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <section id="contact" className="py-12 sm:py-24 bg-[#0b0f19] relative overflow-hidden">
@@ -224,8 +248,8 @@ export default function Contact() {
             </div>
 
             <div className="pt-3 sm:pt-4 mt-3 sm:mt-4 border-t border-slate-800/80">
-              <p className="text-[10px] sm:text-[11px] text-slate-500 text-center font-medium">
-                * Both numbers active for calls & WhatsApp
+              <p className="text-[10px] sm:text-[11px] text-slate-400 text-center font-medium">
+                ⚡ We typically respond within 15–30 minutes during shop hours.
               </p>
             </div>
           </div>
@@ -412,7 +436,7 @@ export default function Contact() {
               )}
             </div>
 
-            <p className="text-[10px] sm:text-[11px] text-slate-500 text-center mt-3 sm:mt-4">
+            <p className="text-[10px] sm:text-[11px] text-slate-400 text-center mt-3 sm:mt-4">
               🔒 Your information is completely safe, private, and confidential.
             </p>
           </div>
@@ -442,18 +466,26 @@ export default function Contact() {
               </div>
 
               {/* Responsive Google Maps Iframe */}
-              <div className="w-full h-56 sm:h-80 rounded-xl sm:rounded-2xl overflow-hidden border border-slate-800 shadow-inner relative bg-slate-950">
-                <iframe
-                  title="Saini Jan Seva Kendra Exact Google Maps Location"
-                  src={mapsEmbedUrl}
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0 }}
-                  allowFullScreen=""
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  className="w-full h-full filter invert-[0.9] hue-rotate-180 contrast-125"
-                />
+              <div ref={mapContainerRef} className="w-full h-56 sm:h-80 rounded-xl sm:rounded-2xl overflow-hidden border border-slate-800 shadow-inner relative bg-slate-950 flex items-center justify-center">
+                {mapVisible ? (
+                  <iframe
+                    title="Saini Jan Seva Kendra Exact Google Maps Location"
+                    src={mapsEmbedUrl}
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen=""
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    className="w-full h-full filter invert-[0.9] hue-rotate-180 contrast-125"
+                  />
+                ) : (
+                  <div className="flex flex-col items-center justify-center text-slate-400 gap-2 p-4 text-center">
+                    <MapPin className="w-8 h-8 text-amber-400 animate-pulse" />
+                    <span className="text-xs font-semibold text-slate-300">Saini Jan Seva Kendra Google Maps</span>
+                    <span className="text-[11px] text-slate-400">Loading interactive map...</span>
+                  </div>
+                )}
               </div>
 
               <a

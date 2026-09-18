@@ -1,5 +1,5 @@
 import React from 'react';
-import { User, MapPin, Phone, CheckCircle, Award, Sparkles, ArrowRight, ShieldCheck } from 'lucide-react';
+import { User, Phone, CheckCircle, Sparkles, ArrowRight } from 'lucide-react';
 
 export default function About({ onOpenLightbox }) {
   const points = [
@@ -79,9 +79,9 @@ export default function About({ onOpenLightbox }) {
               </div>
               <div className="space-y-1">
                 <div className="flex items-center gap-2">
-                  <h4 className="font-extrabold text-white text-sm sm:text-base">
+                  <h3 className="font-extrabold text-white text-sm sm:text-base">
                     Hitesh Kumar
-                  </h4>
+                  </h3>
                   <span className="text-[10px] sm:text-[11px] bg-blue-500/20 text-blue-300 px-2 py-0.5 rounded-full border border-blue-400/30 font-semibold">
                     Proprietor
                   </span>
@@ -114,10 +114,10 @@ export default function About({ onOpenLightbox }) {
 
             {/* Checklist of services in Dark Theme */}
             <div className="space-y-2.5 sm:space-y-3 pt-1">
-              <h4 className="font-extrabold text-white text-xs sm:text-base flex items-center gap-2">
+              <h3 className="font-extrabold text-white text-xs sm:text-base flex items-center gap-2">
                 <Sparkles className="w-4 h-4 text-blue-400 flex-shrink-0" />
                 <span>Key Services & Center Capabilities:</span>
-              </h4>
+              </h3>
               <div className="grid grid-cols-2 sm:grid-cols-2 gap-2 sm:gap-3">
                 {points.map((pt, idx) => (
                   <div key={idx} className="flex items-start gap-1.5 sm:gap-2 text-[11px] sm:text-sm text-slate-300 bg-slate-900/80 p-2 sm:p-3.5 rounded-xl sm:rounded-2xl border border-slate-800 shadow-xs hover:border-blue-500/40 transition-colors">

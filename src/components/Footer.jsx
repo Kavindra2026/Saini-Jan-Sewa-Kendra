@@ -1,6 +1,5 @@
 import React from 'react';
 import { ShieldCheck, MapPin, Phone, MessageCircle, Clock, ArrowUp, Navigation } from 'lucide-react';
-import { SERVICES_DATA } from '../data/servicesData';
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -27,9 +26,9 @@ export default function Footer() {
                 <ShieldCheck className="w-7 h-7 text-white" />
               </div>
               <div>
-                <h3 className="text-xl font-extrabold text-white tracking-tight">
+                <h2 className="text-xl font-extrabold text-white tracking-tight">
                   Saini Jan Seva Kendra
-                </h3>
+                </h2>
                 <p className="text-xs text-blue-400 font-semibold">
                   सैनी जन सेवा केंद्र • CSC Digital Citizen Center
                 </p>
@@ -54,32 +53,32 @@ export default function Footer() {
 
           {/* Col 2: Quick Links (2 cols on mobile, 1 col on desktop) */}
           <div className="lg:col-span-2 space-y-3">
-            <h4 className="text-xs sm:text-sm font-extrabold text-white uppercase tracking-wider border-b border-slate-800 pb-2.5">
+            <h3 className="text-xs sm:text-sm font-extrabold text-white uppercase tracking-wider border-b border-slate-800 pb-2.5">
               Quick Links
-            </h4>
-            <ul className="grid grid-cols-2 lg:grid-cols-1 gap-x-4 gap-y-2.5 text-xs sm:text-sm">
+            </h3>
+            <ul className="grid grid-cols-2 lg:grid-cols-1 gap-x-4 gap-y-1 text-xs sm:text-sm">
               <li>
-                <a href="#home" className="hover:text-blue-400 transition-colors flex items-center gap-1.5 text-slate-400">
+                <a href="#home" className="hover:text-blue-400 transition-colors flex items-center gap-1.5 text-slate-400 py-1">
                   <span className="text-blue-500">›</span> Home
                 </a>
               </li>
               <li>
-                <a href="#about" className="hover:text-blue-400 transition-colors flex items-center gap-1.5 text-slate-400">
+                <a href="#about" className="hover:text-blue-400 transition-colors flex items-center gap-1.5 text-slate-400 py-1">
                   <span className="text-blue-500">›</span> About Us
                 </a>
               </li>
               <li>
-                <a href="#services" className="hover:text-blue-400 transition-colors flex items-center gap-1.5 text-slate-400">
+                <a href="#services" className="hover:text-blue-400 transition-colors flex items-center gap-1.5 text-slate-400 py-1">
                   <span className="text-blue-500">›</span> Our Services
                 </a>
               </li>
               <li>
-                <a href="#gallery" className="hover:text-blue-400 transition-colors flex items-center gap-1.5 text-slate-400">
+                <a href="#gallery" className="hover:text-blue-400 transition-colors flex items-center gap-1.5 text-slate-400 py-1">
                   <span className="text-blue-500">›</span> Photo Gallery
                 </a>
               </li>
               <li className="col-span-2 lg:col-span-1">
-                <a href="#contact" className="hover:text-blue-400 transition-colors flex items-center gap-1.5 text-slate-400">
+                <a href="#contact" className="hover:text-blue-400 transition-colors flex items-center gap-1.5 text-slate-400 py-1">
                   <span className="text-blue-500">›</span> Contact & Location
                 </a>
               </li>
@@ -88,26 +87,26 @@ export default function Footer() {
 
           {/* Col 3: Popular Services (3 columns) */}
           <div className="lg:col-span-3 space-y-3">
-            <h4 className="text-xs sm:text-sm font-extrabold text-white uppercase tracking-wider border-b border-slate-800 pb-2.5">
+            <h3 className="text-xs sm:text-sm font-extrabold text-white uppercase tracking-wider border-b border-slate-800 pb-2.5">
               Popular Services
-            </h4>
-            <div className="grid grid-cols-3 gap-x-2.5 gap-y-2 text-[11px] sm:text-xs text-slate-400">
-              <a href="#services" className="hover:text-white transition-colors truncate">• Aadhaar Card</a>
-              <a href="#services" className="hover:text-white transition-colors truncate">• Scholarship Form</a>
-              <a href="#services" className="hover:text-white transition-colors truncate">• PAN Card</a>
-              <a href="#services" className="hover:text-white transition-colors truncate">• Ration Card</a>
-              <a href="#services" className="hover:text-white transition-colors truncate">• Income Cert.</a>
-              <a href="#services" className="hover:text-white transition-colors truncate">• Caste Cert.</a>
-              <a href="#services" className="hover:text-white transition-colors truncate">• Domicile Cert.</a>
-              <a href="#services" className="hover:text-white transition-colors truncate">• Old Age Pension</a>
-              <a href="#services" className="hover:text-white transition-colors truncate">• Widow Pension</a>
-              <a href="#services" className="hover:text-white transition-colors truncate">• Electricity Bill</a>
-              <a href="#services" className="hover:text-white transition-colors truncate">• Railway Ticket</a>
-              <a href="#services" className="hover:text-white transition-colors truncate">• Xerox Copies</a>
+            </h3>
+            <div className="grid grid-cols-3 gap-x-2.5 gap-y-1 text-[11px] sm:text-xs text-slate-400">
+              <a href="#services" className="hover:text-white transition-colors truncate py-1 inline-block">• Aadhaar Card</a>
+              <a href="#services" className="hover:text-white transition-colors truncate py-1 inline-block">• Scholarship Form</a>
+              <a href="#services" className="hover:text-white transition-colors truncate py-1 inline-block">• PAN Card</a>
+              <a href="#services" className="hover:text-white transition-colors truncate py-1 inline-block">• Ration Card</a>
+              <a href="#services" className="hover:text-white transition-colors truncate py-1 inline-block">• Income Cert.</a>
+              <a href="#services" className="hover:text-white transition-colors truncate py-1 inline-block">• Caste Cert.</a>
+              <a href="#services" className="hover:text-white transition-colors truncate py-1 inline-block">• Domicile Cert.</a>
+              <a href="#services" className="hover:text-white transition-colors truncate py-1 inline-block">• Old Age Pension</a>
+              <a href="#services" className="hover:text-white transition-colors truncate py-1 inline-block">• Widow Pension</a>
+              <a href="#services" className="hover:text-white transition-colors truncate py-1 inline-block">• Electricity Bill</a>
+              <a href="#services" className="hover:text-white transition-colors truncate py-1 inline-block">• Railway Ticket</a>
+              <a href="#services" className="hover:text-white transition-colors truncate py-1 inline-block">• Xerox Copies</a>
             </div>
             <a 
               href="#services" 
-              className="inline-block pt-1 text-xs text-blue-400 hover:text-blue-300 font-bold"
+              className="inline-block pt-1 text-xs text-blue-400 hover:text-blue-300 font-bold py-1"
             >
               Browse All 25 Services →
             </a>
@@ -115,9 +114,9 @@ export default function Footer() {
 
           {/* Col 4: Contact & Address (Side-by-side on mobile) */}
           <div className="lg:col-span-3 space-y-3">
-            <h4 className="text-xs sm:text-sm font-extrabold text-white uppercase tracking-wider border-b border-slate-800 pb-2.5">
+            <h3 className="text-xs sm:text-sm font-extrabold text-white uppercase tracking-wider border-b border-slate-800 pb-2.5">
               Contact Us
-            </h4>
+            </h3>
             <div className="space-y-3 text-xs sm:text-sm">
               <div className="grid grid-cols-2 sm:grid-cols-1 gap-3">
                 <a
@@ -180,7 +179,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar with Required Exact Copyright Text */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
           <p className="text-slate-400 font-bold text-center sm:text-left text-xs sm:text-sm">
             © 2026 सैनी जन सेवा केंद्र. सर्वाधिकार सुरक्षित। (Saini Jan Seva Kendra)
           </p>
@@ -190,7 +189,7 @@ export default function Footer() {
               href={exactMapsPlaceUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-slate-500 hover:text-slate-400 font-medium transition-colors"
+              className="text-slate-400 hover:text-white font-medium transition-colors"
             >
               Village Jaleelpur Mungra • Mandi Dhanaura • Amroha
             </a>

@@ -77,9 +77,9 @@ export default function LightboxModal({ activeIndex, onClose, onNavigate }) {
         </div>
 
         <div className="mt-4 text-center text-white px-4 max-w-2xl">
-          <h4 className="text-lg font-bold text-blue-400">
+          <p className="text-lg font-bold text-blue-400">
             {photo.title}
-          </h4>
+          </p>
           <p className="text-xs sm:text-sm text-slate-300 mt-1">
             {photo.description}
           </p>

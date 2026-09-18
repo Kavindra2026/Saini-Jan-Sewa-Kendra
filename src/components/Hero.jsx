@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, MessageCircle, MapPin, ShieldCheck, CheckCircle2, Clock, Award, Sparkles, Navigation, ArrowUpRight } from 'lucide-react';
+import { Phone, MessageCircle, MapPin, ShieldCheck, CheckCircle2, Clock, Award, ArrowUpRight } from 'lucide-react';
 
 export default function Hero({ onOpenLightbox }) {
   const mapsUrl = "https://www.google.com/maps/place/Saini+Jan+Seva+Kendra/@29.0099281,78.2993049,17z/data=!4m6!3m5!1s0x390ba3002927289b:0x76a1186c3ca523bf!8m2!3d29.0099281!4d78.3018798!16s%2Fg%2F11zfrzm318?entry=ttu&g_ep=EgoyMDI2MDkxNS4wIKXMDSoASAFQAw%3D%3D";
@@ -54,6 +54,8 @@ export default function Hero({ onOpenLightbox }) {
                       alt="सैनी जन सेवा केंद्र जलीलपुर मुंगरा – दुकान का अगला दृश्य"
                       className="w-full h-auto max-h-[440px] object-contain rounded-lg"
                       loading="eager"
+                      fetchPriority="high"
+                      decoding="sync"
                     />
 
                     {/* Real Photo Tag */}
@@ -169,6 +171,8 @@ export default function Hero({ onOpenLightbox }) {
                     alt="सैनी जन सेवा केंद्र जलीलपुर मुंगरा – दुकान का अगला दृश्य"
                     className="w-full h-auto max-h-[480px] object-cover object-top transition-transform duration-500 group-hover:scale-105"
                     loading="eager"
+                    fetchPriority="high"
+                    decoding="sync"
                   />
 
                   {/* Gradient Overlay */}

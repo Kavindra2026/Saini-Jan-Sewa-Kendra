@@ -7,23 +7,30 @@ export default function Navbar() {
   const [activeSection, setActiveSection] = useState('home');
 
   useEffect(() => {
+    let ticking = false;
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setScrolled(window.scrollY > 20);
 
-      const sections = ['home', 'about', 'services', 'gallery', 'contact'];
-      for (const section of sections) {
-        const el = document.getElementById(section);
-        if (el) {
-          const rect = el.getBoundingClientRect();
-          if (rect.top <= 120 && rect.bottom >= 120) {
-            setActiveSection(section);
-            break;
+          const sections = ['home', 'about', 'services', 'gallery', 'contact'];
+          for (const section of sections) {
+            const el = document.getElementById(section);
+            if (el) {
+              const rect = el.getBoundingClientRect();
+              if (rect.top <= 120 && rect.bottom >= 120) {
+                setActiveSection(section);
+                break;
+              }
+            }
           }
-        }
+          ticking = false;
+        });
+        ticking = true;
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -37,41 +44,30 @@ export default function Navbar() {
 
   return (
     <>
-      {/* Top Civic Notification Bar */}
-      <div className="bg-[#050811] text-slate-400 text-xs py-2 px-4 border-b border-slate-800/80">
-        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
-          <div className="flex flex-wrap items-center justify-center sm:justify-start gap-4">
-            <a 
-              href="https://www.google.com/maps/place/Saini+Jan+Seva+Kendra/@29.0099281,78.2993049,17z/data=!4m6!3m5!1s0x390ba3002927289b:0x76a1186c3ca523bf!8m2!3d29.0099281!4d78.3018798!16s%2Fg%2F11zfrzm318?entry=ttu&g_ep=EgoyMDI2MDkxNS4wIKXMDSoASAFQAw%3D%3D"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-1.5 text-slate-300 hover:text-white transition-colors font-medium group cursor-pointer"
-              title="Open Saini Jan Seva Kendra on Google Maps"
-            >
-              <MapPin className="w-3.5 h-3.5 text-blue-400 group-hover:text-rose-400 transition-colors flex-shrink-0" />
-              <span className="hidden sm:inline group-hover:underline underline-offset-2">Village Jaleelpur Mungra, Mandi Dhanaura, Amroha (U.P)</span>
-              <span className="sm:hidden text-[11px] font-medium group-hover:underline">Jaleelpur Mungra, Mandi Dhanaura</span>
-            </a>
-            <span className="hidden md:flex items-center gap-1.5 text-emerald-400 font-medium">
-              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
-              <Clock className="w-3.5 h-3.5" />
-              <span>Open: 7:00 AM – 9:00 PM (Daily)</span>
+      {/* Top Announcement & Quick Contact Bar (Dark Theme) */}
+      <div className="bg-[#070a11] text-slate-300 py-1.5 px-4 sm:px-6 lg:px-8 text-xs border-b border-slate-800/80">
+        <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
+          <div className="flex items-center gap-2 overflow-hidden">
+            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse flex-shrink-0" />
+            <span className="truncate font-medium text-[11px] sm:text-xs">
+              <span className="text-amber-400 font-bold">Open Daily 7am-9pm</span>
+              <span className="hidden md:inline"> • Village Jaleelpur Mungra, Mandi Dhanaura, Amroha (U.P)</span>
             </span>
           </div>
 
           <div className="flex items-center gap-2 sm:gap-3 font-semibold text-[11px] sm:text-xs">
-            <span className="text-slate-500 text-[11px] hidden sm:inline">Direct Helpline:</span>
+            <span className="text-slate-400 text-[11px] hidden sm:inline">Direct Helpline:</span>
             <a 
               href="tel:8449544040" 
-              className="flex items-center gap-1 text-amber-400 hover:text-white px-2 py-0.5 sm:px-2.5 rounded-lg bg-slate-900 border border-slate-800 hover:border-amber-400/50 transition-colors"
+              className="flex items-center gap-1 text-amber-400 hover:text-white px-2 py-1 sm:px-2.5 rounded-lg bg-slate-900 border border-slate-800 hover:border-amber-400/50 transition-colors min-h-[32px]"
             >
               <Phone className="w-3 h-3 text-amber-400" />
               <span>8449544040</span>
             </a>
-            <span className="text-slate-800">|</span>
+            <span className="text-slate-700">|</span>
             <a 
               href="tel:8193043042" 
-              className="flex items-center gap-1 text-amber-400 hover:text-white px-2 py-0.5 sm:px-2.5 rounded-lg bg-slate-900 border border-slate-800 hover:border-amber-400/50 transition-colors"
+              className="flex items-center gap-1 text-amber-400 hover:text-white px-2 py-1 sm:px-2.5 rounded-lg bg-slate-900 border border-slate-800 hover:border-amber-400/50 transition-colors min-h-[32px]"
             >
               <Phone className="w-3 h-3 text-amber-400" />
               <span>8193043042</span>
