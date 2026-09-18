@@ -51,7 +51,11 @@ export default function About({ onOpenLightbox }) {
               <img
                 src="/images/shop-board.jpg"
                 alt="सैनी जन सेवा केंद्र का सेवा बोर्ड – हितेश कुमार, जलीलपुर मुंगरा"
+                width="800"
+                height="533"
                 className="w-full h-52 sm:h-64 object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent pointer-events-none" />
 
@@ -106,11 +110,7 @@ export default function About({ onOpenLightbox }) {
 
           {/* Right Text Description */}
           <div className="lg:col-span-7 space-y-5 sm:space-y-6">
-            <div className="text-slate-300 leading-relaxed">
-              <p className="text-xs sm:text-base text-slate-300 sm:text-slate-200 leading-relaxed font-normal">
-                <strong className="text-white font-bold">Saini Jan Seva Kendra</strong> provides fast, reliable, and convenient doorstep access to essential government schemes, online certificates, pensions, and digital citizen services at official standard rates.
-              </p>
-            </div>
+
 
             {/* Checklist of services in Dark Theme */}
             <div className="space-y-2.5 sm:space-y-3 pt-1">

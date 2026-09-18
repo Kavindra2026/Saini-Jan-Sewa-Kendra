@@ -44,8 +44,11 @@ export default function Gallery({ onOpenLightbox }) {
                 <img
                   src={photo.src}
                   alt={photo.alt || photo.title}
+                  width="800"
+                  height="600"
                   className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500"
                   loading="lazy"
+                  decoding="async"
                 />
 
                 {/* Dark gradient */}

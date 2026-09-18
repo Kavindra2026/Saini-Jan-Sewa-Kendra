@@ -52,6 +52,8 @@ export default function Hero({ onOpenLightbox }) {
                     <img
                       src="/images/saini-jan-seva-kendra-shop.jpg"
                       alt="सैनी जन सेवा केंद्र जलीलपुर मुंगरा – दुकान का अगला दृश्य"
+                      width="625"
+                      height="1024"
                       className="w-full h-auto max-h-[440px] object-contain rounded-lg"
                       loading="eager"
                       fetchPriority="high"
@@ -74,11 +76,7 @@ export default function Hero({ onOpenLightbox }) {
               </div>
             </div>
 
-            {/* Description (Hidden on mobile phones as requested, visible on tablet & desktop) */}
-            <p className="hidden sm:block text-slate-400 text-sm sm:text-base max-w-2xl mx-auto lg:mx-0 leading-relaxed font-normal">
-              Located at <strong className="text-slate-200 font-semibold">Village Jaleelpur Mungra, Mandi Dhanaura, District Amroha (U.P.)</strong>. 
-              We provide fast, secure, and hassle-free assistance for Aadhaar, PAN cards, Income/Caste/Domicile certificates, pensions, electricity bills, railway ticketing, and all government portal applications.
-            </p>
+
 
             {/* Information Badges — side-by-side on mobile, row on tablet/desktop */}
             <div className="grid grid-cols-2 sm:flex sm:flex-nowrap items-center justify-center lg:justify-start gap-1.5 sm:gap-2 text-[11px] sm:text-xs w-full sm:w-auto">
@@ -169,6 +167,8 @@ export default function Hero({ onOpenLightbox }) {
                   <img
                     src="/images/saini-jan-seva-kendra-shop.jpg"
                     alt="सैनी जन सेवा केंद्र जलीलपुर मुंगरा – दुकान का अगला दृश्य"
+                    width="625"
+                    height="1024"
                     className="w-full h-auto max-h-[480px] object-cover object-top transition-transform duration-500 group-hover:scale-105"
                     loading="eager"
                     fetchPriority="high"
